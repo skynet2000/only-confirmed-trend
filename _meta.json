@@ -1,11 +1,40 @@
 {
   "name": "只做确定趋势",
   "name_en": "Only Confirmed Trend",
-  "version": "2.0",
+  "version": "2.1",
   "title": "只做确定趋势",
-  "description": "以极简主义哲学驱动的永续合约策略 Skill。四层过滤（EMA趋势 → ADX持续性确认 → 市场结构 → ATR动量），只有趋势明确且持续时才出手，其余时间什么都不做。当用户说「只做确定趋势」「确认趋势」「四层过滤」时启用。",
-  "author": "OKX Agent Trade Kit Community",
-  "tags": ["趋势追踪", "ADX", "EMA", "ATR", "永续合约", "OKX"],
-  "homepage": "https://www.okx.com",
-  "license": "MIT"
+  "description": "以极简主义哲学驱动的永续合约策略 Skill。四层过滤（EMA趋势 → ADX≥30持续性确认 → 市场结构 → ATR动量），只有趋势明确且持续时才出手，其余时间什么都不做。当用户说「只做确定趋势」「确认趋势」「四层过滤」时启用。",
+  "author": "skynet2000",
+  "tags": ["趋势追踪", "ADX", "EMA", "ATR", "永续合约", "OKX", "四层过滤"],
+  "homepage": "https://github.com/skynet2000/only-confirmed-trend",
+  "license": "MIT",
+  "changelog": [
+    {
+      "version": "2.1",
+      "date": "2026-04-16",
+      "changes": [
+        "ADX 入场阈值从 25 上调至 30（过滤低质量信号）",
+        "TP2 从 5×ATR 调整为 6×ATR（提升盈亏比）",
+        "新增 ADX 分档动态仓位：30-35→5%，35-45→10%，≥45→5%",
+        "ADX 退出保护阈值从 ≥30 调整为 ≥35"
+      ]
+    },
+    {
+      "version": "2.0",
+      "date": "2026-04-16",
+      "changes": [
+        "基于少即是多 V1.0 增加 ADX ≥ 25 趋势持续性确认层",
+        "新增 ADX 持续下降退出保护（ADX < 20 强制平仓）",
+        "重命名为「只做确定趋势」"
+      ]
+    },
+    {
+      "version": "1.0",
+      "date": "2026-04-15",
+      "changes": [
+        "原始版本：少即是三层过滤（EMA + 结构 + ATR）",
+        "ETH 90天回测：-6.40%，胜率 20%"
+      ]
+    }
+  ]
 }
