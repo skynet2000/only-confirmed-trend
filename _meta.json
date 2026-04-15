@@ -1,7 +1,7 @@
 {
   "name": "只做确定趋势",
   "name_en": "Only Confirmed Trend",
-  "version": "2.1",
+  "version": "2.2",
   "title": "只做确定趋势",
   "description": "以极简主义哲学驱动的永续合约策略 Skill。四层过滤（EMA趋势 → ADX≥30持续性确认 → 市场结构 → ATR动量），只有趋势明确且持续时才出手，其余时间什么都不做。当用户说「只做确定趋势」「确认趋势」「四层过滤」时启用。",
   "author": "skynet2000",
@@ -9,6 +9,16 @@
   "homepage": "https://github.com/skynet2000/only-confirmed-trend",
   "license": "MIT",
   "changelog": [
+    {
+      "version": "2.2",
+      "date": "2026-04-16",
+      "changes": [
+        "ADX 退出保护收紧：ADX ≥ 35 回落至 < 25 时平仓（原 < 20）",
+        "新增连续止损保护：连续 3 笔亏损后暂停交易 24 小时",
+        "新增 EMA 距离监控：EMA21 与 EMA55 距离 < 0.5×ATR 时减仓 50%",
+        "新增动态止损：ADX ≥ 40 时止损扩大至 2.5×ATR（原 2×ATR）"
+      ]
+    },
     {
       "version": "2.1",
       "date": "2026-04-16",
