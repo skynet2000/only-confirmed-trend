@@ -1,0 +1,11 @@
+{
+  "name": "只做确定趋势",
+  "name_en": "Only Confirmed Trend",
+  "version": "2.0",
+  "title": "只做确定趋势",
+  "description": "以极简主义哲学驱动的永续合约策略 Skill。四层过滤（EMA趋势 → ADX持续性确认 → 市场结构 → ATR动量），只有趋势明确且持续时才出手，其余时间什么都不做。当用户说「只做确定趋势」「确认趋势」「四层过滤」时启用。",
+  "author": "OKX Agent Trade Kit Community",
+  "tags": ["趋势追踪", "ADX", "EMA", "ATR", "永续合约", "OKX"],
+  "homepage": "https://www.okx.com",
+  "license": "MIT"
+}
